@@ -53,8 +53,21 @@ export default {
         const s = (Math.floor(duration % 60) + '').padStart(2, '0')
         return `${m}:${s}`
     },
-    // 评论时间格式化处理
-    formatMsgTime (duration) {
+    // 添加歌曲到播放列表，过滤重复的歌曲
+    concatPlayList (newList = [], oldList = []) {
+        const arr = [...oldList, ...newList]
+        const map = new Map()
+
+        for (const item of arr) {
+            if (!map.has(item.id)) {
+                map.set(item.id, item)
+            }
+        }
+
+        return [...map.values()]
+    },
+     // 评论时间格式化处理
+     formatMsgTime (duration) {
         let result = ''
         const NOW = new Date()
         const PAST = new Date(duration)
@@ -70,19 +83,6 @@ export default {
         }
 
         return result
-    },
-    // 添加歌曲到播放列表，过滤重复的歌曲
-    concatPlayList (newList = [], oldList = []) {
-        const arr = [...oldList, ...newList]
-        const map = new Map()
-
-        for (const item of arr) {
-            if (!map.has(item.id)) {
-                map.set(item.id, item)
-            }
-        }
-
-        return [...map.values()]
     },
     // 处理歌曲
     formatSongs (list, privileges) {

@@ -13,8 +13,9 @@ const findIndex = (list, playList) => {
 }
 
 
-export const store = defineStore({
-  state: {
+export const useStore = defineStore('main',{
+  state: ()=>{
+    return{
     isLogin: false,
     loginDialogVisible: false,
     isPlayed: false,
@@ -22,9 +23,10 @@ export const store = defineStore({
     userInfo: null,
     playIndex: 0,
     isShowPlayListTips: false,
+    }
   },
   getters: {
-    getisLogin() {
+    getisLogin(){
       return (
         this.isLogin || JSON.parse(window.localStorage.getItem("isLogin"))
       );
@@ -61,7 +63,7 @@ export const store = defineStore({
     setPlayStatus(val=false){
         this.isPlayed=val
     },
-    setPlalyList(val=null){
+    setPlayList(val=null){
         this.playList=val;
         window.localStorage.setItem('playList',JSON.stringify(val))
     },
@@ -69,7 +71,7 @@ export const store = defineStore({
         this.playIndex=val;
         window.localStorage.setItem('playIndex',val)
     },
-    setPlalyListTips(val=false){
+    setPlayListTips(val=false){
         this.isShowPlayListTips=val
     },
     loginSuc(val){
@@ -77,24 +79,24 @@ export const store = defineStore({
     },
     // 播放歌曲列表里全部歌曲（清空当前播放列表）
     playAll({list}){
-        this.setPlalyList(concatPlayList(list));
+        this.setPlayList(concatPlayList(list));
         this.setPlayStatus(true);
         this.setPlayIndex(0)
     },
     //播放当前选中的歌曲
     selectPlay({list}){
         const playList=concatPlayList(list,this.playList);
-        this.setPlalyList(playList);
+        this.setPlayList(playList);
         this.setPlayStatus(true);
         //findIndex返回满足条件的第一个索引
         this.setPlayIndex(findIndex(list[0],playList))
     },
     //添加歌曲到当前播放列表
-    addlist({list}){
+    addList({list}){
         const playList = concatPlayList(list, this.playList)
    
-        this.setPlalyList(playList);
-        this.setPlalyListTips(true)
+        this.setPlayList(playList);
+        this.setPlayListTips(true)
    
     }
 
