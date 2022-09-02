@@ -18,4 +18,4 @@ app.config.globalProperties['$utils'] = util;
 app.config.globalProperties['$COMMON'] = common;
 app.config.globalProperties['$msg'] = ElMessage;
 
-app.use(router).use(createPinia()).mount('#app')
+app.use(createPinia()).use(router).mount('#app')

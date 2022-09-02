@@ -14,18 +14,6 @@
         ><span>{{ item.name }}</span>
       </li>
     </ul>
-    <div class="info">
-      <p>Vue3.x 项目代码Git地址：</p>
-      <a href="https://github.com/trtst/vue3-music" target="_blank">Github</a>
-      <a href="https://gitee.com/trtst/vue3-music" target="_blank">Gitee</a>
-
-      <p>Vue2.x 项目代码Git地址：</p>
-      <a href="https://www.bilibili.com/video/BV1rA411s7oE" target="_blank"
-        >哔哩哔哩</a
-      >
-      <a href="https://github.com/trtst/vue_pc_music" target="_blank">Github</a>
-      <a href="https://gitee.com/trtst/vue_pc_music" target="_blank">Gitee</a>
-    </div>
   </div>
 </template>
 <script setup>
