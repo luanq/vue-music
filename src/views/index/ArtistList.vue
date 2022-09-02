@@ -102,8 +102,6 @@ export default {
   }
 
   .item {
-    // width: 100px;
-    // height: 100px;
     border-radius: 4px;
     overflow: hidden;
   }

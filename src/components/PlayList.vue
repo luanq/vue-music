@@ -84,7 +84,6 @@ defineProps({
     display: block;
     position: relative;
     padding-top: 100%;
-    // height: 216px;
 
     &::after,
     &::before {
@@ -148,7 +147,6 @@ defineProps({
     line-height: 30px;
     padding-right: 10px;
     border-radius: 0 4px 0 0;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.5+97 */
     background: -moz-linear-gradient(
       left,
       rgba(0, 0, 0, 0) 0%,

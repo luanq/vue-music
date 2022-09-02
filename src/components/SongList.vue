@@ -164,10 +164,7 @@ export default {
       timer: null,
     });
 
-    // 获取播放列表
-    // const playIndex = computed(() => {
-    //     return store.getters.playIndex
-    // });
+
     const playList = computed(() => store.getplayList);
     const isPlayed = computed(() => store.isPlayed);
 
@@ -229,16 +226,9 @@ export default {
 
     // 播放当前播放歌曲
     const currentSong = (item) => {
-      // 若当前唔歌曲 或者 当前播放歌曲不是本歌单显示的歌曲  立即播放当前歌单
+      // 若当前无歌曲 或者 当前播放歌曲不是本歌单显示的歌曲  立即播放当前歌单
       if (!curSongInfo.value || item.id !== curSongInfo.value.id) {
         store.selectPlay({ list: [item] });
-        // if (this.isShowTips) {
-        //     this.setPlayListTips({ flag: true, txt: '已开始播放' })
-        //     clearTimeout(this.timer)
-        //     this.timer = setTimeout(() => {
-        //         this.setPlayListTips({ flag: false, txt: '已开始播放' })
-        //     }, 2000)
-        // }
       } else {
         store.setPlayStatus(!isPlayed.value);
       }

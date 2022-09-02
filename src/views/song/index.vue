@@ -439,20 +439,6 @@ export default {
     }
   }
 
-  // &::after {
-  //     content: '';
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     z-index: 2;
-  //     width: 30px;
-  //     height: 30px;
-  //     border-radius: 100%;
-  //     transform: translate(-50%,-50%);
-  //     background: #000;
-  //     box-shadow: 0px 2px 10px 20px rgba(150, 150, 150, 0.5);
-  // }
-
   .iconfont {
     position: absolute;
     z-index: 3;
@@ -690,14 +676,5 @@ export default {
       color: #666;
     }
   }
-}
-
-.song-comments {
-  // position: relative;
-  // padding: 20px;
-  // margin-top: 20px;
-  // background-color: #fff;
-  // box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
-  // border-radius: 6px;
 }
 </style>
