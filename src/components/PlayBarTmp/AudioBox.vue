@@ -166,7 +166,7 @@ watch(
     });
   }
 );
-
+//将操控此组件的函数暴露给上级组件使用
 defineExpose({
     playAudioType,
     playAudioMode,

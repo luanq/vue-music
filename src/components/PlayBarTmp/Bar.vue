@@ -104,7 +104,6 @@
                 <div class="lyrics-container">
                   <h3 class="lyrics-header">
                     <span>歌词</span>
-                    <!-- <i class="iconfont icon-closed" @click="popverClose"></i> -->
                   </h3>
                   <lyrics
                     :sId="curSongInfo.id"
@@ -171,13 +170,10 @@ import {
   computed,
   getCurrentInstance,
   inject,
-  nextTick,
   onBeforeUnmount,
   onMounted,
   reactive,
-  ref,
   toRefs,
-  watchEffect,
 } from "vue";
 import { useStore } from "@/store/index";
 export default {
@@ -202,7 +198,7 @@ export default {
       timer: null,
       tipsTimer: null,
     });
-
+    //在组件挂在前调用所需函数
     onMounted(() => {
       leaveBar();
       store.setPlayList(playList.value);
@@ -382,6 +378,7 @@ export default {
 
     // 切换画中画里音频相关信息
     const changePipSong = () => {
+      //专用api,获取相关数据
       navigator.mediaSession.metadata = new MediaMetadata({
         title: curSongInfo.value.name,
         artist: curSongInfo.value.singer[0].name,
@@ -398,7 +395,7 @@ export default {
 
     const showPictureInPictureWindow = async () => {
       const image = new Image();
-      image.crossOrigin = true;
+      image.crossOrigin = true; //提供了跨域的支持
       image.src = [...navigator.mediaSession.metadata.artwork].pop().src;
       await image.decode();
 

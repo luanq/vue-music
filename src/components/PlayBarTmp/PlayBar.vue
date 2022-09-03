@@ -11,22 +11,12 @@
         @setVolumeHandler="setVolumeHandler"
       ></bar>
     </transition>
-    <transition name="fade-mini">
-      <mini-bar
-        v-if="barType == 'MiniBar'"
-        @changeMini="changeMini"
-        @audioHandler="playSongStates"
-        @playAudioMode="playAudioMode"
-        @setAudioProgress="setAudioProgress"
-      ></mini-bar>
-    </transition>
     <audio-box ref="audioRef" @setCurrentTime="setCurrentTime"></audio-box>
   </div>
 </template>
 
 <script>
 import AudioBox from "@components/PlayBarTmp/AudioBox.vue";
-import MiniBar from "@components/PlayBarTmp/MiniBar.vue";
 import Bar from "@components/PlayBarTmp/Bar.vue";
 import { provide, ref } from "vue";
 
@@ -87,7 +77,6 @@ export default {
   },
   components: {
     AudioBox,
-    MiniBar,
     Bar,
   },
 };

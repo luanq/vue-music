@@ -62,26 +62,6 @@ const simiSong = ({ id = '' }) => { return api.get(`/simi/song?id=${id}`, {}) }
 // 包含这首歌的歌单
 const simiPlayList = ({ id = '' }) => { return api.get(`/simi/playlist?id=${id}`, {}) }
 
-/* ********* 歌曲评论 ********* */
-// 歌曲评论
-const commentSong = ({ id = '', limit = 20, offset = 0, before = 0, timestamp = 0 }) => { return api.get(`/comment/music?id=${id}&limit=${limit}&offset=${offset}&before=${before}&timestamp=${timestamp}`, {}) }
-/*
-    * 发送/删除评论
-    * t: 0删除 1发送 2回复
-    * type: 0: 歌曲 1: mv 2: 歌单 3: 专辑  4: 电台 5: 视频 6: 动态
-    * id: 对应资源id
-    * content: 发送的内容/对应内容的id
-    * commentId: 回复的评论id
-*/
-const comment = ({ t = 1, type = 0, id = '', content = '', commentId = '' }) => { return api.get(`/comment?t=${t}&type=${type}&id=${id}&content=${content}&commentId=${commentId}`, {}) }
-/*
-    * 给评论点赞
-    * id: 对应资源id
-    * cid: 评论id
-    * t: 是否点赞 1: 是  0: 取消
-    * type: 0: 歌曲 1: mv 2: 歌单 3: 专辑  4: 电台 5: 视频 6: 动态
-*/
-const commentLike = ({ id = '', cid = '', t = 1, type = 0 }) => { return api.get(`/comment/like?id=${id}&cid=${cid}&t=${t}&type=${type}`, {}) }
 
 /* ********* 专辑 ********* */
 // 获取专辑内容
@@ -187,9 +167,6 @@ export {
     lyrics,
     simiSong,
     simiPlayList,
-    commentSong,
-    comment,
-    commentLike,
     album,
     albumSub,
     albumDynamic,
