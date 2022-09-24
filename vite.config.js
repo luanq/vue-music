@@ -16,9 +16,11 @@ export default defineConfig({
             resolvers: [ElementPlusResolver()],
         }),
     ],
+    base:'./',
     css: {
         preprocessorOptions: {
             less: {
+                charset:false,
                 modifyVars: {
                     hack: `true; @import (reference) "${resolve('src/assets/less/main.less')}";`,
                 },
@@ -41,5 +43,9 @@ export default defineConfig({
         port: 1234,
         host: '0.0.0.0',
         https: false
+    },
+    build:{
+        minify:false,
+        assetsPublicPath:'./'
     }
 })
