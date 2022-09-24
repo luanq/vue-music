@@ -1,5 +1,5 @@
-import { _ as _export_sfc, x as getCurrentInstance, O as useRoute, v as useRouter, y as useStore, z as reactive, l as onMounted, P as watchEffect, A as toRefs, S as SongList, E as ElImage, o as openBlock, d as createElementBlock, a as createBaseVNode, b as createVNode, w as withCtx, B as createTextVNode, t as toDisplayString, f as createCommentVNode, C as normalizeClass, c as createBlock, F as Fragment, e as renderList, p as pushScopeId, g as popScopeId } from "./index.b48d8b09.js";
-import { _ as __unplugin_components_1 } from "./Loading.3cd2f3f0.js";
+import { _ as _export_sfc, x as getCurrentInstance, O as useRoute, v as useRouter, y as useStore, z as reactive, l as onMounted, P as watchEffect, A as toRefs, S as SongList, E as ElImage, o as openBlock, d as createElementBlock, a as createBaseVNode, b as createVNode, w as withCtx, B as createTextVNode, t as toDisplayString, f as createCommentVNode, C as normalizeClass, c as createBlock, F as Fragment, e as renderList, p as pushScopeId, g as popScopeId } from "./index.4ce00245.js";
+import { _ as __unplugin_components_1 } from "./Loading.1fedd349.js";
 const index_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main = {
   name: "Rank",

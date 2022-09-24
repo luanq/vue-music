@@ -1,4 +1,4 @@
-import { i as ref, l as onMounted, k as watch, D as defineComponent, G as _export_sfc, o as openBlock, d as createElementBlock, a as createBaseVNode, H as buildProps, I as useNamespace, r as resolveComponent, c as createBlock, f as createCommentVNode, C as normalizeClass, u as computed, F as Fragment, e as renderList, J as renderSlot, b as createVNode, K as mergeProps, L as normalizeProps, M as withInstall, N as withNoopInstall } from "./index.b48d8b09.js";
+import { i as ref, l as onMounted, k as watch, D as defineComponent, G as _export_sfc, o as openBlock, d as createElementBlock, a as createBaseVNode, H as buildProps, I as useNamespace, r as resolveComponent, c as createBlock, f as createCommentVNode, C as normalizeClass, u as computed, F as Fragment, e as renderList, J as renderSlot, b as createVNode, K as mergeProps, L as normalizeProps, M as withInstall, N as withNoopInstall } from "./index.4ce00245.js";
 const useThrottleRender = (loading, throttle = 0) => {
   if (throttle === 0)
     return loading;

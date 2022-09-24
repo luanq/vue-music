@@ -1,4 +1,4 @@
-import { H as buildProps, a2 as definePropType, D as defineComponent, I as useNamespace, a3 as shallowRef, z as reactive, u as computed, k as watch, l as onMounted, X as getScrollContainer, a4 as useEventListener, a5 as useResizeObserver, G as _export_sfc, o as openBlock, d as createElementBlock, a as createBaseVNode, J as renderSlot, C as normalizeClass, a6 as normalizeStyle, M as withInstall } from "./index.b48d8b09.js";
+import { H as buildProps, a2 as definePropType, D as defineComponent, I as useNamespace, a3 as shallowRef, z as reactive, u as computed, k as watch, l as onMounted, X as getScrollContainer, a4 as useEventListener, a5 as useResizeObserver, G as _export_sfc, o as openBlock, d as createElementBlock, a as createBaseVNode, J as renderSlot, C as normalizeClass, a6 as normalizeStyle, M as withInstall } from "./index.4ce00245.js";
 const affixProps = buildProps({
   zIndex: {
     type: definePropType([Number, String]),

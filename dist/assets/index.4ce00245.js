@@ -19636,47 +19636,47 @@ const routes = [
   {
     path: "/index",
     name: "index",
-    component: () => __vitePreload(() => import("./index.f7dc2d56.js"), true ? ["index.f7dc2d56.js","index.da13b2c2.css","MvList.83b39a2e.js","MvList.d978afb4.css","el-skeleton-item.6c4ecba9.js","el-skeleton-item.7949890f.css","PlayList.967870c1.js","PlayList.dc3e2eea.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.d4de9de1.js"), true ? ["index.d4de9de1.js","index.da13b2c2.css","MvList.2bf39655.js","MvList.d978afb4.css","el-skeleton-item.e4becbef.js","el-skeleton-item.7949890f.css","PlayList.77c27686.js","PlayList.dc3e2eea.css"] : void 0, import.meta.url)
   },
   {
     path: "/rank",
     name: "rank",
-    component: () => __vitePreload(() => import("./index.34ac6e9a.js"), true ? ["index.34ac6e9a.js","index.42c6d42e.css","Loading.3cd2f3f0.js","Loading.08275444.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.6ef0bbbd.js"), true ? ["index.6ef0bbbd.js","index.42c6d42e.css","Loading.1fedd349.js","Loading.08275444.css"] : void 0, import.meta.url)
   },
   {
     path: "/playlist",
     name: "playlist",
-    component: () => __vitePreload(() => import("./index.b735198d.js"), true ? ["index.b735198d.js","index.73e320d2.css","el-infinite-scroll.547055f1.js","Loading.3cd2f3f0.js","Loading.08275444.css","PlayList.967870c1.js","PlayList.dc3e2eea.css","el-skeleton-item.6c4ecba9.js","el-skeleton-item.7949890f.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.9a341e7c.js"), true ? ["index.9a341e7c.js","index.73e320d2.css","el-infinite-scroll.c261fc66.js","Loading.1fedd349.js","Loading.08275444.css","PlayList.77c27686.js","PlayList.dc3e2eea.css","el-skeleton-item.e4becbef.js","el-skeleton-item.7949890f.css"] : void 0, import.meta.url)
   },
   {
     path: "/playlist/detail",
     name: "playlistdetail",
-    component: () => __vitePreload(() => import("./Detail.85f68103.js"), true ? ["Detail.85f68103.js","Detail.e9704bf0.css","Loading.3cd2f3f0.js","Loading.08275444.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./Detail.b8a0de50.js"), true ? ["Detail.b8a0de50.js","Detail.e9704bf0.css","Loading.1fedd349.js","Loading.08275444.css"] : void 0, import.meta.url)
   },
   {
     path: "/song",
     name: "song",
-    component: () => __vitePreload(() => import("./index.08d80a6c.js"), true ? ["index.08d80a6c.js","index.47c867d7.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.c998f95f.js"), true ? ["index.c998f95f.js","index.47c867d7.css"] : void 0, import.meta.url)
   },
   {
     path: "/album",
     name: "album",
-    component: () => __vitePreload(() => import("./index.0c815188.js"), true ? ["index.0c815188.js","index.68099d10.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.c066b730.js"), true ? ["index.c066b730.js","index.68099d10.css"] : void 0, import.meta.url)
   },
   {
     path: "/artist",
     name: "artist",
-    component: () => __vitePreload(() => import("./index.5c862e40.js"), true ? ["index.5c862e40.js","index.8a898976.css","el-affix.574a5735.js","el-affix.44c48072.css","Loading.3cd2f3f0.js","Loading.08275444.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.9462ea3c.js"), true ? ["index.9462ea3c.js","index.8a898976.css","el-affix.8e0f4954.js","el-affix.44c48072.css","Loading.1fedd349.js","Loading.08275444.css"] : void 0, import.meta.url)
   },
   {
     path: "/mvlist",
     name: "mvlist",
-    component: () => __vitePreload(() => import("./index.9baa38e9.js"), true ? ["index.9baa38e9.js","index.88eebaaf.css","el-infinite-scroll.547055f1.js","el-affix.574a5735.js","el-affix.44c48072.css","Loading.3cd2f3f0.js","Loading.08275444.css","MvList.83b39a2e.js","MvList.d978afb4.css","el-skeleton-item.6c4ecba9.js","el-skeleton-item.7949890f.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./index.d9813a1b.js"), true ? ["index.d9813a1b.js","index.88eebaaf.css","el-infinite-scroll.c261fc66.js","el-affix.8e0f4954.js","el-affix.44c48072.css","Loading.1fedd349.js","Loading.08275444.css","MvList.2bf39655.js","MvList.d978afb4.css","el-skeleton-item.e4becbef.js","el-skeleton-item.7949890f.css"] : void 0, import.meta.url)
   },
   {
     path: "/mvlist/mv",
     name: "mv",
-    component: () => __vitePreload(() => import("./Detail.64bff28a.js"), true ? ["Detail.64bff28a.js","Detail.fd3e3268.css"] : void 0, import.meta.url)
+    component: () => __vitePreload(() => import("./Detail.aae46a78.js"), true ? ["Detail.aae46a78.js","Detail.fd3e3268.css"] : void 0, import.meta.url)
   }
 ];
 const router$1 = createRouter({
@@ -21384,18 +21384,24 @@ const instance = axios.create({
   validateStatus: (status) => {
     return status >= 200 && status < 300;
   },
-  baseURL: "http://localhost:3000"
+  baseURL: "https://netease-cloud-music-api-nc5q.vercel.app"
 });
-instance.interceptors.request.use(function(config) {
-  return config;
-}, function(error) {
-  return Promise.reject(error);
-});
-instance.interceptors.response.use(function(response) {
-  return response;
-}, function(error) {
-  return Promise.reject(error);
-});
+instance.interceptors.request.use(
+  function(config) {
+    return config;
+  },
+  function(error) {
+    return Promise.reject(error);
+  }
+);
+instance.interceptors.response.use(
+  function(response) {
+    return response;
+  },
+  function(error) {
+    return Promise.reject(error);
+  }
+);
 const ajaxMethod = ["get", "post"];
 const api = {};
 ajaxMethod.forEach((method4) => {
