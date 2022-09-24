@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const instance = axios.create({
-  timeout: 1000 * 6,
   // `withCredentials` 表示跨域请求时是否需要使用凭证
   withCredentials: true,
   // `validateStatus` 定义对于给定的HTTP 响应状态码是 resolve 或 reject  promise 。

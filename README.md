@@ -1,8 +1,8 @@
-根据 https://juejin.cn/post/7101490394839384095 教程和其提供的源码仿写的vue音乐网站.
+在线地址:https://luanq.github.io/vue-music/dist/index.html 可能因为科学上网等原因网速较慢
 
+根据 相关教程和开源项目仿写的vue音乐网站.
 
-在理解的前提下将vuex改为了pinia锻炼自己的代码水平
-
+使用vue3,element-plus,新的状态管理工具pinia,vite,vue-router完成
 
 完成此网站使我加深了对vue-router,vuex,pinia,element-plus,vite等配套生态系统的应用
 
@@ -10,5 +10,4 @@
 
 对less这种css扩展语言增加了了解
 
-希望将来有机会我将其改为 typescript独立完成进一步学习
-
+非完全版本,还有一些bug尚未修复,项目结构待完善
