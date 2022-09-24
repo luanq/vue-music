@@ -36,7 +36,7 @@
               >{{ item.name }}</router-link
             >
             <router-link
-              :to="{ path: '/singer', query: { id: item.artistId } }"
+              :to="{}"
               class="mv-author"
               v-if="!item.publishTime"
               >{{ item.artistName }}</router-link

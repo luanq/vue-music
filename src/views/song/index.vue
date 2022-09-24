@@ -18,7 +18,7 @@
               </h3>
               <p>
                 <router-link
-                  :to="{ path: '/singer', query: { id: author.id } }"
+                  :to="{}"
                   class="song-author"
                   v-for="(author, k) in songInfo.singer"
                   :key="author.name"
@@ -78,7 +78,7 @@
                   </router-link>
                   <div class="simi-author">
                     <router-link
-                      :to="{ path: '/singer', query: { id: author.id } }"
+                      :to="{}"
                       class="song-author"
                       v-for="(author, k) in simiItem.singer"
                       :key="author.name"

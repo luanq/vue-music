@@ -6,7 +6,7 @@
           <i class="iconfont icon-mv"></i>{{ mvDetail.name }}
         </div>
         <router-link
-          :to="{ path: '/singer', query: { id: author.id } }"
+          :to="{}"
           class="song-author"
           v-for="(author, k) in mvDetail.artists"
           :key="author.name"
@@ -61,7 +61,7 @@
                 >{{ item.name }}</router-link
               >
               <router-link
-                :to="{ path: '/singer', query: { id: item.artistId } }"
+                :to="{ }"
                 class="mv-author"
                 v-if="!item.publishTime"
                 >{{ item.artistName }}</router-link

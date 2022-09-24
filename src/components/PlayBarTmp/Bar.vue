@@ -36,7 +36,7 @@
             >
             <p>
               <router-link
-                :to="{ path: '/singer', query: { id: author.id } }"
+                :to="{}"
                 class="song_author"
                 v-for="(author, k) in curSongInfo.singer"
                 :key="author.name"
@@ -147,13 +147,6 @@
                   ></song-list>
                 </div>
               </el-popover>
-
-              <i
-                class="iconfont icon-pip"
-                :class="[isPip ? 'active' : '']"
-                @click="picInpic"
-              ></i>
-              <i class="iconfont icon-m" @click="changeMini"></i>
             </div>
           </div>
         </div>
@@ -319,10 +312,6 @@ export default {
       }
     };
 
-    const changeMini = () => {
-      emit("changeMini", "MiniBar");
-    };
-
     const popverHandle = () => {
       info["isLock"] = true;
     };
@@ -361,78 +350,6 @@ export default {
       store.setPlayIndex(0);
     };
 
-    // 画中画
-    const canvas = document.createElement("canvas");
-    canvas.width = 250;
-    canvas.height = 250;
-
-    const video = document.createElement("video");
-    video.srcObject = canvas.captureStream();
-    video.muted = true;
-
-    const picInpic = () => {
-      info["isPip"] = !info["isPip"];
-
-      changePipSong();
-    };
-
-    // 切换画中画里音频相关信息
-    const changePipSong = () => {
-      //专用api,获取相关数据
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: curSongInfo.value.name,
-        artist: curSongInfo.value.singer[0].name,
-        album: curSongInfo.value.album.name,
-        artwork: [{ src: curSongInfo.value.album.picUrl }],
-      });
-
-      if (info["isPip"]) {
-        showPictureInPictureWindow();
-      } else {
-        document.exitPictureInPicture();
-      }
-    };
-
-    const showPictureInPictureWindow = async () => {
-      const image = new Image();
-      image.crossOrigin = true; //提供了跨域的支持
-      image.src = [...navigator.mediaSession.metadata.artwork].pop().src;
-      await image.decode();
-
-      canvas.getContext("2d").drawImage(image, 0, 0, 250, 250);
-      await video.play();
-      await video.requestPictureInPicture();
-    };
-
-    const actionHandlers = [
-      ["play", "play"],
-      ["pause", "play"],
-      ["previoustrack", "prev"],
-      ["nexttrack", "next"],
-    ];
-
-    for (const [action, type] of actionHandlers) {
-      navigator.mediaSession.setActionHandler(action, () => {
-        audioHandler(type);
-        changePipSong();
-
-        if (action == "play") {
-          navigator.mediaSession.playbackState = "playing";
-        } else if (action == "pause") {
-          navigator.mediaSession.playbackState = "paused";
-        }
-      });
-    }
-
-    // 退出画中画
-    video.addEventListener(
-      "leavepictureinpicture",
-      () => {
-        info["isPip"] = false;
-      },
-      false
-    );
-
     return {
       leaveBar,
       enterBar,
@@ -454,8 +371,6 @@ export default {
       setAudioProgress,
       volumeProgressWidth,
       setvolumeProgress,
-      picInpic,
-      changeMini,
     };
   },
 
@@ -758,15 +673,7 @@ export default {
   }
 }
 .playlist-container {
-  // position: absolute;
-  // left: -250px;
-  // bottom: 75px;
-  // width: 500px;
-  // padding: 20px;
-  // border: 1px solid #EBEEF5;
-  // border-radius: 4px 4px 0 0;
   font-size: 14px;
-  // box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
   background: #fff;
 }
 

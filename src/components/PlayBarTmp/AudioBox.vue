@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { computed, nextTick, reactive, ref, toRefs, watch } from "vue";
+import { computed, nextTick, reactive, ref,watch } from "vue";
 import { useStore } from "@/store/index";
 
 const emit = defineEmits(['setCurrentTime']);
@@ -62,7 +62,8 @@ const setvolumeProgress = (val) => {
 // 点击拖拽进度条，设置当前时间
 const setAudioProgress = (t) => {
   const $myAudio = myAudio.value;
-  $myAudio.currentTime = t;
+  $myAudio.currentTime = Math.floor(t);
+  console.log(t);
 };
 
 // 解决刷新页面时候，音频准备就绪
@@ -124,7 +125,8 @@ const updateSongTime = (e) => {
   if (!info.initAudioReady) {
     return;
   }
-  emit("setCurrentTime", e.target.currentTime);
+  emit("setCurrentTime", Math.floor(e.target.currentTime));
+  console.log(e.target.currentTime);
 };
 
 watch(

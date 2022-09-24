@@ -50,7 +50,7 @@
           <div class="columnSinger songlist-singer">
             <!--- 返回的数据里用户的uid有可能为0 --->
             <router-link
-              :to="{ path: '/singer', query: { id: author.id } }"
+              :to="{ }"
               class="song_name"
               v-for="(author, k) in item.singer"
               :key="author.name"

@@ -3,7 +3,6 @@
     <transition name="fade-bar">
       <bar
         v-if="barType == 'Bar'"
-        @changeMini="changeMini"
         @audioHandler="playSongStates"
         @playAudioMode="playAudioMode"
         @setvolumeProgress="setvolumeProgress"
@@ -15,14 +14,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import AudioBox from "@components/PlayBarTmp/AudioBox.vue";
 import Bar from "@components/PlayBarTmp/Bar.vue";
 import { provide, ref } from "vue";
 
-export default {
-  name: "PlayBar",
-  setup() {
     const audioRef = ref(null);
     const currentTime = ref(0);
     const barType = ref("Bar");
@@ -48,7 +44,7 @@ export default {
 
     // 拖拽音频进度条
     const setAudioProgress = (t) => {
-      audioRef.value.setAudioProgress(t);
+      audioRef.value.setAudioProgress(Math.floor(t));
     };
 
     // 当前音频的播放时长
@@ -56,30 +52,9 @@ export default {
       currentTime.value = t;
     };
 
-    const changeMini = (type) => {
-      barType.value = type;
-    };
-
     // 下发当前音频时间戳
     provide("currentTime", currentTime);
 
-    return {
-      barType,
-      audioRef,
-      changeMini,
-      setCurrentTime,
-      playSongStates,
-      playAudioMode,
-      setVolumeHandler,
-      setAudioProgress,
-      setvolumeProgress,
-    };
-  },
-  components: {
-    AudioBox,
-    Bar,
-  },
-};
 </script>
 <style scoped lang="less">
 .play-bar {

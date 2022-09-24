@@ -2,7 +2,7 @@
   <div class="item">
     <em class="circle"></em>
     <router-link
-      :to="{ path: '/singer', query: { id: item.id } }"
+      :to="{}"
       class="faceImg"
     >
       <el-image :src="item.picUrl + '?param=120y120'">
@@ -14,7 +14,7 @@
     <div class="info">
       <div class="info-header">
         <router-link
-          :to="{ path: '/singer', query: { id: item.id } }"
+          :to="{}"
           class="name"
           >{{ item.name }}</router-link
         >

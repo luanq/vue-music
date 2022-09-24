@@ -65,21 +65,6 @@
         ></mv-list>
       </div>
     </div>
-
-    <div class="dj-artist">
-      <div class="dj-list">
-        <div class="h_title">
-          <h3>热门电台</h3>
-        </div>
-        <dj-list />
-      </div>
-      <div class="artist-list">
-        <div class="h_title">
-          <h3>热门歌手</h3>
-        </div>
-        <artist-list />
-      </div>
-    </div>
   </div>
 </template>
 
@@ -89,8 +74,6 @@ import RankList from "@views/index/RankList.vue";
 import PlayList from "@components/PlayList.vue";
 import AlbumList from "@components/AlbumList.vue";
 import MvList from "@components/MvList.vue";
-import DjList from "@views/index/DjList.vue";
-import ArtistList from "@views/index/ArtistList.vue";
 
 import hot_recom from "@assets/js/index/hot_recom";
 import new_album from "@assets/js/index/new_album";
@@ -125,8 +108,6 @@ export default {
     AlbumList,
     RankList,
     MvList,
-    DjList,
-    ArtistList,
   },
 };
 </script>

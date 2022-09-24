@@ -39,14 +39,6 @@ const menuList = reactive([
     name: "MV",
     path: "mvlist",
   },
-  {
-    name: "歌手",
-    path: "artist",
-  },
-  {
-    name: "我的音乐",
-    path: "my",
-  },
 ]);
 // 当前选择菜单
 const menuActive = computed(() => route.path);
@@ -60,9 +52,10 @@ const selectMenu = (item) => {
 </script>
 <style lang="less" scoped>
 .side-main {
-  // opacity: .1;
+  background-color: #444;
   padding: 0 35px;
   text-align: center;
+  height: 100%;
 }
 .logo {
   display: inline-block;

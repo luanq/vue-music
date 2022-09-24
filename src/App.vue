@@ -25,6 +25,10 @@
     const loginDialogVisible = computed(() => store.loginDialogVisible);
 
 </script>
-<style>
+<style scoped>
+
+.el-main{
+    background-color: #5b5b5b;
+}
 
 </style>

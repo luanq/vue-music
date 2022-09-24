@@ -18,7 +18,7 @@
               <div class="cover-collect-author">
                 <router-link
                   class="collect-author"
-                  :to="{ path: '/singer', query: { id: item.userId } }"
+                  :to="{}"
                   v-for="item in collects"
                   :key="item.userId"
                 >

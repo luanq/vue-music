@@ -80,8 +80,6 @@ defineProps({
     flex: 2;
     max-width: 120px;
     max-height: 120px;
-    // width: 120px;
-    // height: 120px;
 
     &::after {
       display: inline-block;
