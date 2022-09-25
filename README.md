@@ -1,4 +1,4 @@
-在线地址:https://luanq.github.io/vue-music/dist/index.html 可能因为科学上网等原因网速较慢
+在线地址:https://luanq.github.io/vue-music/dist/index.html 借助vercel托管网易云api,所以必须通过科学上网获取数据.
 
 根据 相关教程和开源项目仿写的vue音乐网站.
 
